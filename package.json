@@ -7,11 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1 mocha",
     "start": "nodemon app.js",
     "server": "nodemon app.js",
-    "frontend": "npm start --prefix Client",
-    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "frontend": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -27,6 +26,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.0.1"
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4"
   }
 }
